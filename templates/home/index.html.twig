@@ -50,34 +50,81 @@
             </div>
         </nav>
 
+        <div class="container">
 
+            <h1 id="text" ></h1>
+        </div>
     </header>
 
+    <h2 class="text-center">Disciplines</h2>
 
+    <section class=" sec-1 show-animate">
+        <h2 class="animate">jujitsu brésilien</h2>
+        <img class="animate" src="https://i.pinimg.com/564x/b1/78/de/b178de471c651dca1436077e02d50a04.jpg" alt="">
+    </section>
+
+    <section class=" sec-2">
+        <h2 class="animate">jujitsu brésilien</h2>
+        <img class="animate" src="https://i.pinimg.com/564x/7b/e5/27/7be5272e005002f6e74d9e0920550fd3.jpg" alt="">
+    </section>
+
+{#    <section class="sec-3">#}
+{#        <h2 class="animate">Grappling</h2>#}
+{#        <img class="animate" src="https://i.pinimg.com/564x/ee/11/2c/ee112ca5eb8f4d7b3a554bb07fcc454a.jpg" alt="">#}
+{#    </section>#}
+{#    <section class="sec-4">#}
+{#        <h2 class="animate">Boxe</h2>#}
+{#        <img class="animate" src="https://i.pinimg.com/564x/dc/80/31/dc8031675ef3a9450e67810019541c77.jpg" alt="">#}
+{#    </section>#}
+{#    <section class="sec-5">#}
+{#        <h2 class="animate">Mma</h2>#}
+{#        <img class="animate" src="https://i.pinimg.com/564x/b6/90/31/b69031a3a792e71411d7e3390a49ff51.jpg" alt="">#}
+{#    </section>#}
+
+    <h2 class="text-center">Planning</h2>
     <div id="calendrier">
-
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.3.0/main.min.js"
             integrity="sha256-DBxkGZLxKsLKhz054qUpBqtotG00r9AELGpSigJujLg=" crossorigin="anonymous"></script>
 
 
 
-{% endblock %}
+
 
 {% block javascripts %}
+
+
+
     <script>
+
+
+
+
 window.onload = () => {
+
     let calendarElt = document.querySelector("#calendrier")
 
     let calendar = new FullCalendar.Calendar(calendarElt, {
         initialView: 'timeGridWeek',
         locale:'fr',
         timeZone: 'Europe/Paris',
+        height: 860,
+        // day: "numeric",
+
         headerToolbar:{
             start : "",
-            center:"title",
+            center:"",
             end:''
-        }
+        },
+        hiddenDays: [ 0 ],
+        slotMinTime: '08:00:00',
+        // slotMaxTime: '23:00:00',
+        // slotDuration: '01:00:00',
+        allDaySlot: false ,
+        eventColor: 'red',
+        dayHeaderFormat: { weekday: 'long' }
+
     })
 
     calendar.render();
@@ -85,4 +132,8 @@ window.onload = () => {
 
 
     </script>
+{% endblock %}
+
+
+    <h2>salutr</h2>
 {% endblock %}
