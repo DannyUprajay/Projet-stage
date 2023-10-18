@@ -54,7 +54,7 @@ window.addEventListener('scroll', () => {
         let offset = sec.offsetTop + 56;
         let height = sec.offsetHeight;
 
-        if (top >= offset - 200 && top < offset - 200 + height ) {
+        if (top >= offset - 500 && top < offset - 200 + height ) {
             sec.classList.add('show-animate');
         } else {
             sec.classList.remove('show-animate');
