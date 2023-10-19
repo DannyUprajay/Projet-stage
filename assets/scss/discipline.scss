@@ -1,0 +1,160 @@
+//.disciplineHeader{
+//  background-image: url("https://images.alphacoders.com/100/1003488.jpg");
+//  background-position: center top;
+//
+//  width: 100%;
+//  height: 100vh;
+//  //background-position: top 30px right ;
+//  //clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%, 0% 50%);
+//  object-fit: cover;
+//  background-repeat: no-repeat;
+//
+//  a {
+//    color: gainsboro;
+//    text-decoration: none;
+//    font-family: 'Rubik', sans-serif;
+//  }
+//
+//  a:hover {
+//    color: white;
+//    text-decoration: underline white;
+//  }
+//
+//  i {
+//    color: white;
+//  }
+//}
+
+//html {
+//  line-height: 0;
+//}
+//
+//
+//.section {
+//  position: sticky;
+//  transition: 0.5s;
+//  opacity: 0;
+//  color: white;
+//  text-align: center;
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//  height: 100vh;
+//  backdrop-filter: blur(10px);
+//  -webkit-backdrop-filter: blur(10px);
+//
+//
+//  &.show-animate {
+//    opacity: 1;
+//  }
+//
+//  .animate2 {
+//    opacity: 0;
+//    transition: opacity 0.5s;
+//  }
+//
+//  &.show-animate .animate2 {
+//    opacity: 1;
+//  }
+//}
+//
+//.fixed-image {
+//  position: sticky;
+//}
+//
+//img {
+//  position: sticky;
+//  width: 200%; /* Pour assurer que l'image prend toute la largeur du conteneur */
+//}
+
+
+
+html {
+  line-height: 0;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+  z-index: 1;
+}
+
+.section {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+
+  > * {
+    width: 50%;
+  }
+
+  &__img {
+    position: relative;
+    display: flex;
+
+    &__inner {
+      height: 100vh;
+      position: fixed;
+      left: 10%;
+      width: 40%;
+      top: 0;
+      mix-blend-mode: multiply;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+  }
+
+  &__text {
+    padding: 0vw;
+  }
+}
+
+
+.section__img__inner {
+  filter: blur(30px);
+  opacity: 0;
+  background-position: 50% 40%;
+  transition: filter .6s ease, opacity .6s ease, background-position 0.8s ease;
+}
+
+.section.active .section__img__inner {
+  opacity: 1;
+  background-position: 50% 50%;
+  filter: blur(0);
+}
+
+h2 {
+  font-size: 3vw;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+
+
+
+
+
+//.sec-1 .animate {
+//  //transform: translateX(-550%);
+//  opacity: 0;
+//}
+//
+//.sec-1.show-animate .animate {
+//  //transform: translateX(0%);
+//  opacity: 1;
+//}
+
+
+//background-size: cover;
+//background-position: center center;

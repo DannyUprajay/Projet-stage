@@ -21,7 +21,7 @@
                             <a class="active mx-2 active" aria-current="page" href="#">Incription</a>
                         </li>
                         <li class="nav-item">
-                            <a class=" mx-2" href="#">Disciplines</a>
+                            <a class=" mx-2" href="{{ path('app_discipline') }}">Disciplines</a>
                         </li>
                         <li class="nav-item">
                             <a class=" mx-2" href="#">Coach</a>
@@ -58,9 +58,20 @@
 
     <h2 class="text-center">Disciplines</h2>
 
-    <section class=" sec-1 show-animate">
+
+
+
+
+    <section class=" sec-1 show-animate ">
+        <div class="col-6 text-center">
         <h2 class="animate">lutte gréco-romaine</h2>
         <img class="animate" src="https://i.pinimg.com/564x/b1/78/de/b178de471c651dca1436077e02d50a04.jpg" alt="">
+        </div>
+        <div class="col-6">
+        <p class="animate">La lutte gréco-romaine est une forme de lutte dans laquelle les lutteurs ne peuvent utiliser que leurs bras et ne peuvent attaquer que le haut du corps de leur adversaires, contrairement à la lutte libre, où ils peuvent aussi utiliser leurs jambes et tenir leur adversaire en dessous de la ceinture.
+
+            Les lutteurs commencent leur assaut debout et essaient d'envoyer leur adversaire au tapis. Les combattants doivent porter toutes leurs prises au-dessus de la ceinture et l'usage des jambes, croche-pied et plaquages sont interdits.</p>
+        </div>
     </section>
 
     <section class=" sec-2">
@@ -81,6 +92,7 @@
         <img class="animate" src="https://i.pinimg.com/564x/b6/90/31/b69031a3a792e71411d7e3390a49ff51.jpg" alt="">
     </section>
 
+
     <h2 class="text-center">Planning</h2>
     <div id="calendrier">
     </div>
@@ -97,10 +109,6 @@
 
 
     <script>
-
-
-
-
 window.onload = () => {
 
     let calendarElt = document.querySelector("#calendrier")
@@ -129,7 +137,6 @@ window.onload = () => {
 
     calendar.render();
 }
-
 
     </script>
 {% endblock %}

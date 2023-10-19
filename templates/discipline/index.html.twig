@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DisciplineController!{% endblock %}
+
+{% block body %}
+
+
+    {#    <header class="disciplineHeader "> #}
+
+    {#        <nav class="navbar navbar-expand-lg navbar-light p-4 "> #}
+    {#            <div class="container-fluid "> #}
+    {#                <a class="navbar-brand text-light" href="#">MMA Pulse </a> #}
+    {#                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" #}
+    {#                        data-bs-target="#navbarNavDropdown" #}
+    {#                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> #}
+    {#                    <span class="navbar-toggler-icon"></span> #}
+    {#                </button> #}
+
+    {#                <div class=" collapse navbar-collapse " id="navbarNavDropdown "> #}
+    {#                    <ul class="navbar-nav ms-auto "> #}
+    {#                        <li class="nav-item"> #}
+    {#                            <a class="active mx-2 active" aria-current="page" href="#">Incription</a> #}
+    {#                        </li> #}
+    {#                        <li class="nav-item"> #}
+    {#                            <a class=" mx-2" href="{{ path('app_discipline') }}">Disciplines</a> #}
+    {#                        </li> #}
+    {#                        <li class="nav-item"> #}
+    {#                            <a class=" mx-2" href="#">Coach</a> #}
+    {#                        </li> #}
+    {#                        <li class="nav-item"> #}
+    {#                            <a class=" mx-2" href="#">Planning</a> #}
+    {#                        </li> #}
+    {#                        <li class="nav-item"> #}
+    {#                            <a class=" mx-2" href="#">Contact</a> #}
+    {#                        </li> #}
+    {#                    </ul> #}
+    {#                </div> #}
+    {#            </div> #}
+    {#        </nav> #}
+
+    {#        <div class="container"> #}
+
+    {#            <h1 id="text" ></h1> #}
+    {#        </div> #}
+    {#    </header> #}
+
+
+
+
+    <div class="background"></div>
+
+    <div class="section">
+        <div class="section__img">
+            <div
+                    class="section__img__inner"
+                    style="background-image: url(https://images8.alphacoders.com/104/1040814.jpg);"
+            ></div>
+        </div>
+        <div class="section__body">
+            <div class="section__text">
+                <h2>MMA</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section__img">
+            <div
+                    class="section__img__inner"
+                    style="background-image: url(https://e7.pngegg.com/pngimages/356/135/png-clipart-ippo-makunouchi-mamoru-takamura-genji-kamogawa-anime-comedy-injured-black-hair-hand-thumbnail.png);"
+            ></div>
+        </div>
+        <div class="section__body">
+            <div class="section__text">
+                <h2>Boxe</h2>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    {% block javascripts %}
+        <script  src={{ asset('js/discipline.js') }}></script>
+    {% endblock %}
+    {#    </div> #}
+{% endblock %}

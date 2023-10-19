@@ -7,4 +7,5 @@
 
 // any CSS you import will output into a single css file (app.scss in this case)
 import './scss/app.scss';
+import './scss/discipline.scss';
 import 'bootstrap/dist/js/bootstrap';
