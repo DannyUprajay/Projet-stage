@@ -1,3 +1,35 @@
+function calendrier() {
+    window.onload = () => {
+        let calendarElt = document.querySelector("#calendrier")
+
+        let calendar = new FullCalendar.Calendar(calendarElt, {
+            initialView: 'timeGridWeek',
+            locale: 'fr',
+            timeZone: 'Europe/Paris',
+            height: 860,
+            // day: "numeric",
+
+            headerToolbar: {
+                start: "",
+                center: "",
+                end: ''
+            },
+            hiddenDays: [0],
+            slotMinTime: '08:00:00',
+            // slotMaxTime: '23:00:00',
+            // slotDuration: '01:00:00',
+            allDaySlot: false,
+            eventColor: 'red',
+            dayHeaderFormat: {weekday: 'long'}
+
+        })
+
+        calendar.render();
+    }
+}
+calendrier();
+
+
 document.addEventListener("DOMContentLoaded", function() {
     let placeholder = document.getElementById("text");
     let words2 = ["Il n’y a pas de talent ici, ce n’est que du travail. C’est une obsession. Le talent n’existe pas.", "En tant qu’humains, nous sommes tous égaux. Vous pouvez devenir qui vous voulez si vous y consacrez du temps."," Vous atteindrez le sommet, c’est comme ça. Je ne suis pas talentueux.", "Je suis obsédé.", "Mcgregor", "Je m'entraîne, je mange, je dors, et je recommence.", "Khabib"];
