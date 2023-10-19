@@ -68,25 +68,46 @@
 //}
 
 
+.disciplineHeader {
+
+background-color: #2d1328;
+
+  a {
+    color: gainsboro;
+    text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+  }
+
+  a:hover {
+    color: white;
+    text-decoration: underline white;
+  }
+
+  i {
+    color: white;
+  }
+
+}
 
 html {
-  line-height: 0;
+  line-height: 1.618;
 }
 
 .background {
+  background-color: #FFFFFF;
   position: fixed;
   top: 0;
   left: 0;
   width: 50%;
   height: 100vh;
-  z-index: 1;
+  z-index: -1;
 }
 
 .section {
   display: flex;
   min-height: 100vh;
   position: relative;
-  z-index: 2;
+  z-index: -1;
 
   > * {
     width: 50%;
@@ -94,12 +115,13 @@ html {
 
   &__img {
     position: relative;
+//background-color: white;
     display: flex;
 
     &__inner {
       height: 100vh;
       position: fixed;
-      left: 10%;
+      left: 5%;
       width: 40%;
       top: 0;
       mix-blend-mode: multiply;
@@ -117,7 +139,7 @@ html {
   }
 
   &__text {
-    padding: 0vw;
+    padding: 5vw;
   }
 }
 
@@ -140,6 +162,7 @@ h2 {
   margin-bottom: 0.5em;
   margin-top: 0;
 }
+
 
 
 
