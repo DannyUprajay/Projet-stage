@@ -27,4 +27,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
     }).scroll();
 
+
+
+    let divScroll = document.querySelector('.scroll');
+    let lastScroll = 0;
+
+    window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset;
+        console.log(window.pageYOffset + "sasakn,saikn");
+        if (currentScroll <= 0) {
+            divScroll.classList.remove("scroll-up");
+            return;
+        }
+
+        if (currentScroll > lastScroll && !divScroll.classList.contains("scroll-down")) {
+            divScroll.classList.remove("scroll-up");
+            divScroll.classList.add("scroll-down");
+        } else if (
+            currentScroll < lastScroll &&
+            divScroll.classList.contains("scroll-down")
+        ) {
+            divScroll.classList.remove("scroll-down");
+            divScroll.classList.add("scroll-up");
+        }
+        lastScroll = currentScroll;
+    });
+
+
 });

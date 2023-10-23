@@ -15,7 +15,7 @@ body {
 
 div {
   img {
-    width: 100%;
+    //width: 100%;
 
     object-fit: cover;
   }
@@ -23,11 +23,11 @@ div {
 
 .test {
   background-image: url("https://images8.alphacoders.com/104/1040814.jpg");
-  width: 100%;
+  //width: 100%;
   height: 115vh;
   //background-position: top 30px right ;
   //clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%, 0% 50%);
-  object-fit: cover;
+  //object-fit: cover;
   background-repeat: no-repeat;
 
   a {
@@ -49,6 +49,7 @@ div {
 
 #calendrier {
   width: 80%;
+  height: 100px;
   margin: auto;
 }
 
@@ -59,7 +60,7 @@ div {
 }
 
 .fc .fc-timegrid-slot {
-  height: 2.5em;
+  height: 1.5em;
 }
 
 .text-citation {
@@ -80,95 +81,3 @@ h1 {
   //opacity: 0;
 }
 
-section {
-  display: flex;
-  align-content: center;
-  min-height: 100vh;
-  //flex-direction: column;
-  //justify-content: center;
-  //align-items: center;
-  overflow-x: hidden;
-
-  h2 {
-    font-size: 5em;
-    color: black;
-  }
-
-  img {
-    width: 500px;
-  }
-}
-
-
-section {
-
-  .animate {
-    transition: 1s;
-  }
-
-  p {
-    background-color: beige;
-    clip-path: polygon(0% 0%, 100% 0, 100% 73%, 42% 74%, 29% 80%, 23% 75%, 0 74%);
-    border-radius: 20px;
-    color: darkmagenta;
-    height: 300px;
-    padding: 15px;
-    text-align: justify;
-    position: relative;
-    top: 20%;
-    //padding: 100px;
-    margin: 0;
-    width: 80%;
-    font-size: 1.1em;
-  }
-}
-
-.sec-1 .animate {
-  //transform: translateX(-550%);
-  opacity: 0;
-}
-
-.sec-1.show-animate .animate {
-  //transform: translateX(0%);
-  opacity: 1;
-}
-
-.sec-2 .animate {
-  //transform: translateX(550%);
-  opacity: 0;
-}
-
-.sec-2.show-animate .animate {
-  //transform: translateX(0%);
-  opacity: 1;
-}
-
-.sec-3 .animate {
-  //transform: translateX(-550%);
-  opacity: 0;
-}
-
-.sec-3.show-animate .animate {
-  //transform: translateX(0%);
-  opacity: 1;
-}
-
-.sec-4 .animate {
-  //transform: translateX(550%);
-  opacity: 0;
-}
-
-.sec-4.show-animate .animate {
-  //transform: translateX(0%);
-  opacity: 1;
-}
-
-.sec-5 .animate {
-  //transform: translateX(550%);
-  opacity: 0;
-}
-
-.sec-5.show-animate .animate {
-  //transform: translateX(0%);
-  opacity: 1;
-}
