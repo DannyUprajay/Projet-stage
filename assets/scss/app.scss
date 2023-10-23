@@ -48,7 +48,7 @@ div {
 }
 
 #calendrier {
-  width: 80%;
+  width: 90%;
   height: 100px;
   margin: auto;
 }
@@ -81,3 +81,34 @@ h1 {
   //opacity: 0;
 }
 
+
+.fc .fc-timegrid-slot{
+
+  color: black;
+  border: red;
+}
+
+.fc .fc-timegrid-now-indicator-container{
+  background-color: #c7b4c7;
+}
+
+.fc-scrollgrid-sync-inner{
+  background-color:  #c7b4c7;
+
+
+}
+.fc-timegrid-axis{
+  background-color:  #c7b4c7;
+}
+
+.fc-timegrid-now-indicator-container{
+  width: 5000px;
+}
+
+.fc-v-event .fc-event-title-container {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
