@@ -1,5 +1,6 @@
 {% extends 'base.html.twig' %}
 
+
 {% block title %}MMA PULSE !{% endblock %}
 
 
@@ -27,15 +28,11 @@
 
                 <div class=" collapse navbar-collapse " id="navbarNavDropdown ">
                     <ul class="navbar-nav ms-auto ">
-                        <li class="nav-item">
-                            <a class="active mx-2 active" aria-current="page" href="#">Incription</a>
-                        </li>
+
                         <li class="nav-item">
                             <a class=" mx-2" href="{{ path('app_discipline') }}">Disciplines</a>
                         </li>
-                        <li class="nav-item">
-                            <a class=" mx-2" href="#">Coach</a>
-                        </li>
+
                         <li class="nav-item">
                             <a class=" mx-2" href="#">Planning</a>
                         </li>
@@ -53,7 +50,7 @@
         </div>
     </header>
 
-    
+
     <h2 class="text-center">Tarif</h2>
 
   <div class="container-fluid">
@@ -143,6 +140,33 @@
 
 
     <h2>salutr</h2>
+
+{#       <div class="container mt-5 bg-light">#}
+{#        <h3 class="text-center">Vous avez une question ?</h3>#}
+{#        <p class="text-center">Contactez nous ! </p>#}
+
+{#        <div class="row">#}
+{#            <div class="col-md-6 w-100">#}
+{#                {{ form_start(formulaire) }}#}
+{#                <div class="form-group text-center">#}
+{#                    {{ form_label(formulaire.email) }}#}
+{#                    {{ form_widget(formulaire.email, {'attr': {'placeholder': 'Votre adresse e-mail'}}) }}#}
+{#                    {{ form_errors(formulaire.email) }}#}
+{#                </div>#}
+
+{#                <div class="form-group text-center">#}
+{#                    {{ form_label(formulaire.content) }}#}
+{#                    {{ form_widget(formulaire.content, {'attr': {'placeholder': 'Votre message'}}) }}#}
+{#                    {{ form_errors(formulaire.content) }}#}
+{#                </div>#}
+
+{#                <div class="text-center">#}
+{#                    {{ form_widget(formulaire.envoyer, {'label': 'Envoyer', 'attr': {'class': 'btn btn-primary'}}) }}#}
+{#                    {{ form_end(formulaire) }}#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
 {% endblock %}
 
     {% block javascripts %}
@@ -244,4 +268,5 @@
 
 
         </script>
+
     {% endblock %}

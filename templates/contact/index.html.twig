@@ -5,11 +5,11 @@
 
 {% block body %}
 
-    <header class="disciplineHeader ">
+    <header class="bg-danger ">
 
         <nav class="navbar navbar-expand-lg navbar-light p-4 ">
             <div class="container-fluid ">
-                <a class="navbar-brand text-light" href="{{ path('home') }}">MMA Pulse </a>
+                <a class="navbar-brand text-light"  href="{{ path('home') }}">MMA Pulse </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavDropdown"
                         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,7 @@
     </header>
 
 
-    <div class="container mt-5 bg-light">
+    <div class="container mt-5 bg-light ">
         <h3 class="text-center">Vous avez une question ?</h3>
         <p class=" text-center">Contactez nous ! </p>
 
@@ -49,14 +49,22 @@
             <div class="col-md-6 w-100">
                 {{ form_start(formulaire) }}
                 <div class="form-group text-center ">
+                    <div class="">
                     {{ form_label(formulaire.email) }}
-                    {{ form_widget(formulaire.email, {'attr': {'placeholder': 'Votre adresse e-mail'}}) }}
+                    </div>
+                    <div class="">
+                        {{ form_widget(formulaire.email, {'attr': {'placeholder': 'Votre adresse e-mail', 'style': 'width:30%'}  }) }}
+                    </div>
+
                     {{ form_errors(formulaire.email) }}
                 </div>
 
                 <div class="form-group text-center">
-                    {{ form_label(formulaire.content) }}
-                    {{ form_widget(formulaire.content, {'attr': {'placeholder': 'Votre message'}}) }}
+                    <div>
+                    <label for="" class="text-left">votre message</label>
+
+                    </div>
+                    {{ form_widget(formulaire.content, {'attr': {'placeholder': 'Votre message' , 'style': 'width:30%'}}) }}
                     {{ form_errors(formulaire.content) }}
                 </div>
 
