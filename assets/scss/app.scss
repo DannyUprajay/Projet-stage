@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: lightgray;
+  background-color: rgb(252, 248, 248);
 }
 
 div {
@@ -114,7 +114,35 @@ h1 {
 }
 
 
+.fc .fc-timegrid-slot{
+  border: none!important;
+}
+
+.card {
+  background-color: white;
+  transition: 1s;
+
+  small, button{
+    transition: color 1s, background 1s;
+
+  }
+
+  &:hover {
+    background-color: #3cb8d7;
+    color: white;
+
+    small {
+      color: white;
+    }
+    button{
+      color: white;
+      background: #212121;
+    }
+  }
+}
 
 
-
+.presentation{
+  height: 100vh;
+}
 

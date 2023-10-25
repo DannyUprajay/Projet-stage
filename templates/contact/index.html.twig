@@ -5,42 +5,42 @@
 
 {% block body %}
 
-    <header class="bg-dark-subtle ">
+{#    <header class="" style="background-color: #2d1328; " >#}
 
-        <nav class="navbar navbar-expand-lg navbar-light p-4 ">
-            <div class="container-fluid ">
-                <a class="navbar-brand text-light"  href="{{ path('home') }}">MMA Pulse </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNavDropdown"
-                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+{#        <nav class="navbar navbar-expand-lg navbar-light p-4 " >#}
+{#            <div class="container-fluid  ">#}
+{#                <a class="navbar-brand text-light"  href="{{ path('home') }}">MMA Pulse </a>#}
+{#                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"#}
+{#                        data-bs-target="#navbarNavDropdown"#}
+{#                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">#}
+{#                    <span class="navbar-toggler-icon"></span>#}
+{#                </button>#}
 
-                <div class=" collapse navbar-collapse " id="navbarNavDropdown ">
-                    <ul class="navbar-nav ms-auto ">
+{#                <div class=" collapse navbar-collapse " id="navbarNavDropdown ">#}
+{#                    <ul class="navbar-nav ms-auto ">#}
 
-                        <li class="nav-item">
-                            <a class=" mx-2" href="{{ path('app_discipline') }}">Disciplines</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class=" mx-2" href="#">Planning</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class=" mx-2" href="{{ path('app_contact') }}">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+{#                        <li class="nav-item" >#}
+{#                            <a class=" mx-2" href="{{ path('app_discipline') }}">Disciplines</a>#}
+{#                        </li>#}
+{#                        <li class="nav-item">#}
+{#                            <a class=" mx-2" href="#">Planning</a>#}
+{#                        </li>#}
+{#                        <li class="nav-item">#}
+{#                            <a class=" mx-2" href="{{ path('app_contact') }}">Contact</a>#}
+{#                        </li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#            </div>#}
+{#        </nav>#}
 
-    </header>
+{#    </header>#}
 
 
-    <div class="container mt-5 bg-light ">
-        <h3 class="text-center">Vous avez une question ?</h3>
-        <p class=" text-center">Contactez nous ! </p>
+    <div class="container mt-5 mb-5 bg-light " style="height: 500px; width: 850px; border-radius: 20px ">
+        <h3 class="text-center" >Vous avez une question ?</h3>
+        <p class=" text-center text-danger">Contactez nous ! </p>
 
-        <div class="row">
+        <div class="row ">
             <div class="col-md-6 w-100">
                 {{ form_start(formulaire) }}
                 <div class="form-group text-center ">
@@ -48,7 +48,7 @@
                     {{ form_label(formulaire.email) }}
                     </div>
                     <div class="">
-                        {{ form_widget(formulaire.email, {'attr': {'placeholder': 'Votre adresse e-mail', 'style': 'width:30%'}  }) }}
+                        {{ form_widget(formulaire.email, {'attr': {'placeholder': 'Votre adresse e-mail', 'style': 'width:50%'}  }) }}
                     </div>
 
                     {{ form_errors(formulaire.email) }}
@@ -59,7 +59,7 @@
                     <label for="" class="text-left">votre message</label>
 
                     </div>
-                    {{ form_widget(formulaire.content, {'attr': {'placeholder': 'Votre message' , 'style': 'width:30%'}}) }}
+                    {{ form_widget(formulaire.content, {'attr': {'placeholder': 'Votre message' , 'style': 'width:50%' }}) }}
                     {{ form_errors(formulaire.content) }}
                 </div>
 
@@ -70,4 +70,9 @@
             </div>
         </div>
     </div>
+
+
+
+
+
 {% endblock %}
