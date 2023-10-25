@@ -128,7 +128,7 @@ h1 {
   }
 
   &:hover {
-    background-color: #3cb8d7;
+    background-color: red;
     color: white;
 
     small {
@@ -136,7 +136,7 @@ h1 {
     }
     button{
       color: white;
-      background: #212121;
+      border: white 1px solid;
     }
   }
 }
