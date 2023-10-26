@@ -3,7 +3,7 @@
 position: fixed;
   top: 0;
   width: 100%;
-background-color: #2d1328;
+background-color: black;
   z-index: 9999 ;
   transition: all 300ms ease-in-out;
 
@@ -15,7 +15,7 @@ background-color: #2d1328;
 
   a:hover {
     color: white;
-    text-decoration: underline white;
+    //text-decoration: underline white;
   }
 
   i {
