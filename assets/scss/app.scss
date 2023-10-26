@@ -89,16 +89,16 @@ h1 {
 }
 
 .fc .fc-timegrid-now-indicator-container{
-  background-color: aliceblue;
+  background-color: #fcf8f8;
 }
 
 .fc-scrollgrid-sync-inner{
-  background-color:  aliceblue;
+  background-color:  #fcf8f8;
 
 
 }
 .fc-timegrid-axis{
-  background-color:  aliceblue;
+  background-color:  #fcf8f8;
 }
 
 //.fc-timegrid-now-indicator-container{
@@ -120,14 +120,21 @@ h1 {
 }
 
 .card {
-  background-color: white;
+  background-color: black;
+  color: white;
   transition: 1s;
 
-  small, button{
+  small {
     transition: color 1s, background 1s;
+    color: white;
 
   }
 
+  button{
+    transition: color 1s, background 1s;
+    color: white;
+    border: white 2px solid;
+  }
   &:hover {
     background-color: #970011;
     color: white;
@@ -137,7 +144,7 @@ h1 {
     }
     button{
       color: white;
-      border: white 1px solid;
+      border: white 2px solid;
     }
   }
 }
@@ -154,4 +161,9 @@ hr {
 
 .fc .fc-scrollgrid-liquid {
   height: 95%;
+}
+
+:root {
+  --fc-border-color: black;
+
 }
