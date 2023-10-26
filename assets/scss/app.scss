@@ -128,7 +128,7 @@ h1 {
   }
 
   &:hover {
-    background-color: red;
+    background-color: #970011;
     color: white;
 
     small {
@@ -146,3 +146,7 @@ h1 {
   height: 100vh;
 }
 
+hr {
+  width:90%;
+  margin:0 auto;
+}
