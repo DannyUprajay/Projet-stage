@@ -154,6 +154,12 @@ h1 {
 
 .presentation{
   height: 100vh;
+
+  //img{
+  //  @include media-breakpoint-down(md){
+  //    width: 410px;
+  //  }
+  //}
 }
 
 hr {
@@ -168,4 +174,11 @@ hr {
 :root {
   --fc-border-color: black;
 
+}
+
+
+.tarif{
+  @include media-breakpoint-down(lg){
+    margin-bottom: 700px;
+  }
 }
