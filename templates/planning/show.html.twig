@@ -3,7 +3,7 @@
 {% block title %}Planning{% endblock %}
 
 {% block body %}
-    <h1>Planning</h1>
+    <h1 class="text-dark">Planning</h1>
 
     <table class="table">
         <tbody>
@@ -34,9 +34,11 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_planning_index') }}">back to list</a>
 
-    <a href="{{ path('app_planning_edit', {'id': planning.id}) }}">edit</a>
+
+    <a href="{{ path('app_planning_index') }}" class="me-2">Retour à la liste</a>
+
+    <a href="{{ path('app_planning_edit', {'id': planning.id}) }}">Modifier</a>
 
     {{ include('planning/_delete_form.html.twig') }}
 {% endblock %}

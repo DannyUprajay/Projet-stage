@@ -3,7 +3,7 @@
 {% block title %}Planning index{% endblock %}
 
 {% block body %}
-    <h1>Planning index</h1>
+    <h1 class="text-dark text-center mx-auto">Planning</h1>
 
     <table class="table">
         <thead>
@@ -27,8 +27,8 @@
                 <td>{{ planning.backgroundColor }}</td>
                 <td>{{ planning.textColor }}</td>
                 <td>
-                    <a href="{{ path('app_planning_show', {'id': planning.id}) }}">show</a>
-                    <a href="{{ path('app_planning_edit', {'id': planning.id}) }}">edit</a>
+                    <a href="{{ path('app_planning_show', {'id': planning.id}) }}">Voir</a>
+                    <a href="{{ path('app_planning_edit', {'id': planning.id}) }}">Modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -39,5 +39,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_planning_new') }}">Create new</a>
+    <a href="{{ path('app_planning_new') }}">Créer nouveau</a>
 {% endblock %}
