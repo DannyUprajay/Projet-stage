@@ -47,6 +47,107 @@ div {
 
 }
 
+
+@media screen and (max-width: 1024px) {
+  .homeheader{
+    width: 100%;
+    min-height: 70vh;
+    background-position: top -30px left -450px;
+  }
+
+  .presentation{
+    height: 57vh!important;
+  }
+
+  .tarif{
+    height: 50vh!important;
+  }
+
+  .club img{
+    width: 370px!important;
+    height: 350px!important;
+  }
+
+
+}
+
+
+@media screen and (max-width: 768px){
+  .homeheader{
+    width: 795px;
+    min-height: 70vh;
+    background-position: top -30px left -450px;
+  }
+
+  .presentation, .club{
+    font-size: .8rem;
+  }
+
+ .club img{
+   width: 300px!important;
+ }
+}
+
+@media screen and (max-width: 430px){
+  .homeheader{
+    width: 450px;
+    min-height: 100vh;
+    background-position: top -1px left -850px;
+
+    h1{
+      font-size: 1.5rem;
+      width: 200px;
+    }
+  }
+
+  .presentation {
+    height: 80vh!important;
+    img{
+      width: 300px!important;
+     position: relative;
+      left: 10%;
+      margin-bottom: 10px;
+
+    }
+  }
+
+  .club{
+    img{
+      position: relative;
+      left: 10%;
+      margin-top: 10px;
+    }
+  }
+
+
+  #calendrier {
+    width: 90%;
+    height: 720px!important;
+    margin: auto;
+  }
+
+  .fc .fc-timegrid-slot {
+    height: .5em!important;
+  }
+
+
+  .fc-v-event .fc-event-title-container {
+    font-size: .5rem!important;
+  }
+
+  .fc .fc-scrollgrid-liquid {
+    height: 320px!important;
+    width: 400px!important;
+    font-size: .5rem;
+  }
+}
+
+
+.club img{
+  width: 700px;
+  height: 500px;
+}
+
 #calendrier {
   width: 90%;
   height: 100px;
@@ -155,11 +256,6 @@ h1 {
 .presentation{
   height: 100vh;
 
-  //img{
-  //  @include media-breakpoint-down(md){
-  //    width: 410px;
-  //  }
-  //}
 }
 
 hr {
@@ -176,6 +272,9 @@ hr {
 
 }
 
+.tarif{
+  height: 90vh;
+}
 
 .tarif{
   @include media-breakpoint-down(lg){
