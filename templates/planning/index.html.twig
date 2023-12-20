@@ -1,43 +1,64 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Planning index{% endblock %}
+{% block title %}Planning Index{% endblock %}
 
 {% block body %}
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-4">
+        <div class="container">
+            <a class="navbar-brand" href="{{ path('home') }}">MMA Pulse</a>
+
+            <div class="testNav">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="{{ path('home') }}">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
     <h1 class="text-dark text-center mx-auto">Planning</h1>
 
-    <table class="table">
-        <thead>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark">
             <tr>
                 <th>Id</th>
                 <th>Title</th>
                 <th>Start</th>
                 <th>End</th>
-                <th>Background_color</th>
-                <th>Text_color</th>
-                <th>actions</th>
+                <th>Background Color</th>
+                <th>Text Color</th>
+                <th>Actions</th>
             </tr>
-        </thead>
-        <tbody>
-        {% for planning in plannings %}
-            <tr>
-                <td>{{ planning.id }}</td>
-                <td>{{ planning.title }}</td>
-                <td>{{ planning.start ? planning.start|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ planning.end ? planning.end|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ planning.backgroundColor }}</td>
-                <td>{{ planning.textColor }}</td>
-                <td>
-                    <a href="{{ path('app_planning_show', {'id': planning.id}) }}">Voir</a>
-                    <a href="{{ path('app_planning_edit', {'id': planning.id}) }}">Modifier</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="7">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+            {% for planning in plannings %}
+                <tr>
+                    <td>{{ planning.id }}</td>
+                    <td>{{ planning.title }}</td>
+                    <td>{{ planning.start ? planning.start|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ planning.end ? planning.end|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ planning.backgroundColor }}</td>
+                    <td>{{ planning.textColor }}</td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="{{ path('app_planning_show', {'id': planning.id}) }}">Voir</a>
+                        <a class="btn btn-warning btn-sm" href="{{ path('app_planning_edit', {'id': planning.id}) }}">Modifier</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="7">No records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
 
-    <a href="{{ path('app_planning_new') }}">Créer nouveau</a>
+    <a class="btn btn-success" href="{{ path('app_planning_new') }}">Créer Nouveau</a>
+
 {% endblock %}

@@ -5,35 +5,6 @@
 
 {% block body %}
 
-{#    <header class="" style="background-color: #2d1328; " >#}
-
-{#        <nav class="navbar navbar-expand-lg navbar-light p-4 " >#}
-{#            <div class="container-fluid  ">#}
-{#                <a class="navbar-brand text-light"  href="{{ path('home') }}">MMA Pulse </a>#}
-{#                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"#}
-{#                        data-bs-target="#navbarNavDropdown"#}
-{#                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">#}
-{#                    <span class="navbar-toggler-icon"></span>#}
-{#                </button>#}
-
-{#                <div class=" collapse navbar-collapse " id="navbarNavDropdown ">#}
-{#                    <ul class="navbar-nav ms-auto ">#}
-
-{#                        <li class="nav-item" >#}
-{#                            <a class=" mx-2" href="{{ path('app_discipline') }}">Disciplines</a>#}
-{#                        </li>#}
-{#                        <li class="nav-item">#}
-{#                            <a class=" mx-2" href="#">Planning</a>#}
-{#                        </li>#}
-{#                        <li class="nav-item">#}
-{#                            <a class=" mx-2" href="{{ path('app_contact') }}">Contact</a>#}
-{#                        </li>#}
-{#                    </ul>#}
-{#                </div>#}
-{#            </div>#}
-{#        </nav>#}
-
-{#    </header>#}
 
 
     <header class="disciplineHeader ">
@@ -41,19 +12,17 @@
         <nav class="navbar navbar-expand-lg navbar-light p-4 ">
             <div class="container-fluid ">
                 <a class="navbar-brand text-light" href="{{ path('home') }}">MMA Pulse </a>
-                {#                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"#}
-                {#                            data-bs-target="#navbarNavDropdown"#}
-                {#                            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">#}
-                {#                        <span class="navbar-toggler-icon"></span>#}
-                {#                    </button>#}
 
-                <div>
-                    <ul class="navbar-nav ms-auto ">
+
+                <div class="testNav " >
+                    <ul class=" d-flex ms-auto ">
+
                         <li class="nav-item">
                             <a class=" mx-2" href="{{ path('app_discipline') }}">Disciplines</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class=" mx-2" href="{{ path('app_contact') }}">Contact</a>
+                            <a class=" mx-2" >Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -62,40 +31,33 @@
 
     </header>
 
-    <div class="container mb-5 bg-white p-5" style="height: 400px; width: 850px; border-radius: 20px; margin-top: 200px; ">
-        <h2 class="text-center" >Vous avez une question ?</h2>
-        <p class=" text-center" style="color: #970011">Contactez nous ! </p>
+    <div class="container contact mb-5 bg-white p-5">
+        <h2 class="text-center">Vous avez une question ?</h2>
+        <p class="text-center" style="color: #970011">Contactez-nous ! </p>
 
-        <div class="row ">
-            <div class="col-md-6 w-100">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
                 {{ form_start(formulaire) }}
-                <div class="form-group text-center ">
-                    <div class="">
+                <div class="form-group text-center">
                     {{ form_label(formulaire.email) }}
-                    </div>
-                    <div class="">
-                        {{ form_widget(formulaire.email, {'attr': {'placeholder': 'Votre adresse e-mail', 'style': 'width:50%'}  }) }}
-                    </div>
-
+                    {{ form_widget(formulaire.email, {'attr': {'placeholder': 'Votre adresse e-mail', 'class': 'form-control'}  }) }}
                     {{ form_errors(formulaire.email) }}
                 </div>
 
                 <div class="form-group text-center">
-                    <div>
-                    <label for="" class="text-left">votre message</label>
-
-                    </div>
-                    {{ form_widget(formulaire.content, {'attr': {'placeholder': 'Votre message' , 'style': 'width:50%' }}) }}
+                    <label for="" class="text-left">Votre message</label>
+                    {{ form_widget(formulaire.content, {'attr': {'placeholder': 'Votre message', 'class': 'form-control'}}) }}
                     {{ form_errors(formulaire.content) }}
                 </div>
 
                 <div class="text-center">
-                {{ form_widget(formulaire.envoyer, {'label': 'Envoyer', 'attr': {'class': 'btn', 'style': 'background-color:#970011; color:white;'}}) }}
-                    {{ form_end(formulaire) }}
+                    {{ form_widget(formulaire.envoyer, {'label': 'Envoyer', 'attr': {'class': 'btn', 'style': 'background-color:#970011; color:white;'}}) }}
                 </div>
+                {{ form_end(formulaire) }}
             </div>
         </div>
     </div>
+
 
 
 

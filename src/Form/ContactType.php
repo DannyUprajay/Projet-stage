@@ -17,7 +17,7 @@ class ContactType extends AbstractType
         $builder
             ->add('email', null, [
                 'constraints' => [
-                    new Email(['message' => 'L\'adresse e-mail n\'est pas valide.']),
+                    new Email(['message' => "L'adresse e-mail n'est pas valide."]),
                     new NotBlank(['message' => 'Veuillez entrer votre adresse e-mail.']),
                 ],
             ])

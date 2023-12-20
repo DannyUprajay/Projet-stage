@@ -25,20 +25,19 @@ div {
   background-image: url("https://images8.alphacoders.com/104/1040814.jpg");
   width: 100%;
   min-height: 115vh;
-  //background-position: top 30px right ;
-  //clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%, 0% 50%);
-  //object-fit: cover;
-  //background-repeat: no-repeat;
+
 
   a {
     color: gainsboro;
     text-decoration: none;
     font-family: 'Rubik', sans-serif;
+
   }
 
   a:hover {
     color: white;
     //text-decoration: underline white;
+
   }
 
   i {
@@ -49,101 +48,200 @@ div {
 
 
 @media screen and (max-width: 1024px) {
-  .homeheader{
+
+  .text-citation{
+    h1{
+      font-size: 4vh;
+      position:relative;
+      top:-200px;
+    }
+  }
+
+  .homeheader {
     width: 100%;
     min-height: 70vh;
     background-position: top -30px left -450px;
   }
 
-  .presentation{
-    height: 57vh!important;
+  .presentation {
+    height: 57vh !important;
+
+    img{
+      width: 300px;
+    }
   }
 
-  .tarif{
-    height: 50vh!important;
+  .tarif {
+    height: 50vh !important;
   }
 
-  .club img{
-    width: 370px!important;
-    height: 350px!important;
+  .club img {
+    width: 370px !important;
+    height: 350px !important;
   }
 
 
+}
+
+
+@media screen and (max-width: 768px) {
+
+
+  header nav ul li a{
+    padding: 35px;
+  }
+
+  .text-citation{
+    h1{
+      font-size: 3vh;
+      position:relative;
+      top:-200px;
+    }
+  }
+
+  .homeheader {
+    width: 100%;
+    min-height: 70vh;
+    background-position: top -10px left -600px;
+  }
+
+  .presentation, .club {
+    font-size: .8rem;
+  }
+
+  .club img {
+    width: 300px !important;
+  }
 }
 
 
 @media screen and (max-width: 768px){
-  .homeheader{
-    width: 795px;
-    min-height: 70vh;
-    background-position: top -30px left -450px;
+  header nav ul li a{
+    padding: 5px;
   }
 
-  .presentation, .club{
-    font-size: .8rem;
-  }
+  .text-citation{
+    h1{
+      font-size: 2vh;
 
- .club img{
-   width: 300px!important;
- }
+    }
+  }
 }
 
-@media screen and (max-width: 430px){
-  .homeheader{
+
+@media screen and (max-width: 640px){
+
+  header{
+    overflow: hidden;
+  }
+  header nav ul li a{
+    padding: 5px;
+  }
+
+  .homeheader {
+    width: 100%;
+    min-height: 70vh;
+    background-position: top -10px left -800px;
+  }
+
+  .text-citation{
+    h1{
+      font-size: 2vh;
+
+    }
+  }
+}
+
+
+@media screen and (max-width: 575px){
+
+  .contact{
+    height: auto!important;
+    width: 80%!important;
+    margin-left: auto!important;
+    margin-right: auto!important;
+  }
+
+.presentation{
+  height: 70vh!important;
+
+
+}
+
+  img{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .fc-v-event .fc-event-title-container {
+    font-size: 1rem !important;
+  }
+.fc-event-time{
+  font-size: .5rem !important;
+}
+  .fc-col-header-cell-cushion,.fc-scrollgrid-shrink-cushion{
+    font-size: .7rem !important;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .homeheader {
     width: 450px;
     min-height: 100vh;
     background-position: top -1px left -850px;
 
-    h1{
+    h1 {
       font-size: 1.5rem;
       width: 200px;
     }
   }
 
   .presentation {
-    height: 80vh!important;
-    img{
-      width: 300px!important;
-     position: relative;
+    height: 80vh !important;
+
+    img {
+      width: 300px !important;
+      position: relative;
       left: 10%;
       margin-bottom: 10px;
 
     }
   }
+  .club {
 
-  .club{
-    img{
+    img {
       position: relative;
       left: 10%;
       margin-top: 10px;
     }
   }
 
-
   #calendrier {
     width: 90%;
-    height: 720px!important;
+    height: 720px !important;
     margin: auto;
   }
 
   .fc .fc-timegrid-slot {
-    height: .5em!important;
+    height: .5em !important;
   }
 
 
   .fc-v-event .fc-event-title-container {
-    font-size: .5rem!important;
+    font-size: .5rem !important;
   }
 
   .fc .fc-scrollgrid-liquid {
-    height: 320px!important;
-    width: 400px!important;
+    height: 320px !important;
+    width: 400px !important;
     font-size: .5rem;
   }
 }
 
 
-.club img{
+.club img {
   width: 700px;
   height: 500px;
 }
@@ -185,23 +283,24 @@ h1 {
 }
 
 
-.fc .fc-timegrid-slot{
+.fc .fc-timegrid-slot {
   height: 1.9em;
   color: black;
   border: none;
 }
 
-.fc .fc-timegrid-now-indicator-container{
+.fc .fc-timegrid-now-indicator-container {
   background-color: #fcf8f8;
 }
 
-.fc-scrollgrid-sync-inner{
-  background-color:  #fcf8f8;
+.fc-scrollgrid-sync-inner {
+  background-color: #fcf8f8;
 
 
 }
-.fc-timegrid-axis{
-  background-color:  #fcf8f8;
+
+.fc-timegrid-axis {
+  background-color: #fcf8f8;
 }
 
 //.fc-timegrid-now-indicator-container{
@@ -218,8 +317,8 @@ h1 {
 }
 
 
-.fc .fc-timegrid-slot{
-  border: none!important;
+.fc .fc-timegrid-slot {
+  border: none !important;
 }
 
 .card {
@@ -233,11 +332,12 @@ h1 {
 
   }
 
-  button{
+  button {
     transition: color 1s, background 1s;
     color: white;
     border: white 2px solid;
   }
+
   &:hover {
     background-color: #970011;
     color: white;
@@ -245,7 +345,8 @@ h1 {
     small {
       color: white;
     }
-    button{
+
+    button {
       color: white;
       border: white 2px solid;
     }
@@ -253,14 +354,14 @@ h1 {
 }
 
 
-.presentation{
+.presentation {
   height: 100vh;
 
 }
 
 hr {
-  width:90%;
-  margin:0 auto;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .fc .fc-scrollgrid-liquid {
@@ -272,12 +373,17 @@ hr {
 
 }
 
-.tarif{
+.tarif {
   height: 90vh;
 }
 
-.tarif{
-  @include media-breakpoint-down(lg){
+.tarif {
+  @include media-breakpoint-down(lg) {
     margin-bottom: 700px;
   }
+}
+
+
+.contact{
+  height: 400px; width: 850px; border-radius: 20px; margin-top: 200px;
 }

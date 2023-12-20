@@ -15,16 +15,23 @@ class PlanningType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('title')
+            ->add('title', null, [
+                'attr' => ['class' => 'form-control'],
+            ])
             ->add('start', DateTimeType::class, [
-                'date_widget'=> 'single_text'
+                'widget' => 'single_text',
+                'attr'   => ['class' => 'form-control'],
             ])
             ->add('end', DateTimeType::class, [
-                'date_widget'=> 'single_text'
+                'widget' => 'single_text',
+                'attr'   => ['class' => 'form-control'],
             ])
-            ->add('background_color', ColorType::class)
-            ->add('text_color', ColorType::class)
-        ;
+            ->add('background_color', ColorType::class, [
+                'attr' => ['class' => 'form-control'],
+            ])
+            ->add('text_color', ColorType::class, [
+                'attr' => ['class' => 'form-control'],
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void
