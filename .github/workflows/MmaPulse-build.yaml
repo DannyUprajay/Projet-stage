@@ -19,12 +19,12 @@ env:
 jobs:
 # Please do not rename this job
   build-project:
-    name: build Projet-stage
+    name: build MmaPulse
     runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
-      # if you add permissions here this needs to be done in the Projet-stage-orchestration.yaml as well
+      # if you add permissions here this needs to be done in the MmaPulse-orchestration.yaml as well
     steps:
       - name: checkout
         uses: actions/checkout@v3
@@ -35,7 +35,7 @@ jobs:
         uses: ionos-deploy-now/template-renderer-action@v2
         id: template
         with:
-          input-directory: .deploy-now/Projet-stage
+          input-directory: .deploy-now/MmaPulse
           output-directory: ${{ env.DEPLOYMENT_FOLDER }}
           intermediate-data-file: ${{ env.DEPLOYMENT_FOLDER }}/.template-renderer-data
 
@@ -74,5 +74,5 @@ jobs:
           branch-id: ${{ inputs.branch-id }}
           version: ${{ github.sha }}
           folder: ${{ env.DEPLOYMENT_FOLDER }}
-          config-file: .deploy-now/Projet-stage/config.yaml
+          config-file: .deploy-now/MmaPulse/config.yaml
           action: upload
