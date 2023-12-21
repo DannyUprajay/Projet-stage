@@ -62,6 +62,7 @@ jobs:
         with:
           php_version: '8.1'
           version: '2'
+          args: --optimize-autoloader --no-dev
 
 # Please do not touch the following action
       - name: Store deployment content
@@ -69,7 +70,7 @@ jobs:
         with:
           api-key: ${{ secrets.IONOS_API_KEY }}
           service-host: api-eu.ionos.space
-          project-id: 29dd2600-aec9-442d-a504-5b2e44cd1d69
+          project-id: 9f5bf822-e8f6-46c9-9ac9-3f486e7fb904
           branch-id: ${{ inputs.branch-id }}
           version: ${{ github.sha }}
           folder: ${{ env.DEPLOYMENT_FOLDER }}
