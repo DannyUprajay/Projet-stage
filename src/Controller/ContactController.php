@@ -26,10 +26,12 @@ class ContactController extends AbstractController
             $content = $data['content'];
 
             $email = (new Email())
-                ->from($address)
-                ->to("danny.uprajay@gmail.com")
+                ->from('contact@mma.danny-webdev.fr')
+                ->to("contact@mma.danny-webdev.fr")
                 ->subject('Demande de contact')
-                ->text($content);
+                ->text("Client Email: $address\n\n$content")
+                ->replyTo($address);
+
 
             $mailer->send($email);
 
